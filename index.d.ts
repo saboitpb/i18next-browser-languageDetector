@@ -1,4 +1,4 @@
-import * as i18next from "i18next";
+import i18next from "i18next";
 
 interface DetectorOptions {
   /**
@@ -58,7 +58,7 @@ export default class I18nextBrowserLanguageDetector
    */
   init(services?: any, options?: DetectorOptions): void;
 
-  detect(detectionOrder?: DetectorOptions["order"]): string | undefined;
+  detect(detectionOrder?: DetectorOptions["order"]): string;
 
   cacheUserLanguage(lng: string, caches?: string[]): void;
 
